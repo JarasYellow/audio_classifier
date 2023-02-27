@@ -148,16 +148,16 @@ def main(files, root, dst):
 		mfcc = extract_mfcc(y)
 		center =  extract_spectral_centroid(y)
 		flatness = extract_spectral_flatness(y)
-    	bandwidth = extract_spectral_bandwidth(y)
-    	zero = extract_zero_crossing_rate(y)
+		bandwidth = extract_spectral_bandwidth(y)
+		zero = extract_zero_crossing_rate(y)
 		
 		save_numpy(os.path.join(dst, DST_SPEC), fname=fname, arr=spec)
 		save_numpy(os.path.join(dst, DST_MELSPECS), fname=fname, arr=melpec)
 		save_numpy(os.path.join(dst, DST_MFCC), fname=fname, arr=mfcc)
-		save_numpy(os.path.join(dst,DST_CENTER), fname=fname, arr=center)
+		save_numpy(os.path.join(dst, DST_CENTER), fname=fname, arr=center)
 		save_numpy(os.path.join(dst, DST_FLATNESS), fname=fname, arr=center)
-    	save_numpy(os.path.join(dst, DST_BANDWIDTH), fname=fname, arr=center)
-    	save_numpy(os.path.join(dst, DST_ZERO_CROSSING_RATE), fname=fname, arr=center)
+		save_numpy(os.path.join(dst, DST_BANDWIDTH), fname=fname, arr=center)
+		save_numpy(os.path.join(dst, DST_ZERO_CROSSING_RATE), fname=fname, arr=center)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='Prepare audio features')
