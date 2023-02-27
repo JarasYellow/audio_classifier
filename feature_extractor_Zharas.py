@@ -146,7 +146,7 @@ def main(files, root, dst):
 		spec = extract_spectrogram(y)
 		melpec = extract_melspectrogram(y)
 		mfcc = extract_mfcc(y)
-		center =  extract_spectral_centroid(y)
+		center = extract_spectral_centroid(y)
 		flatness = extract_spectral_flatness(y)
 		bandwidth = extract_spectral_bandwidth(y)
 		zero = extract_zero_crossing_rate(y)
