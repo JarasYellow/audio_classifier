@@ -134,7 +134,7 @@ def make_dirs(dst, list_dirs):
 
 def main(files, root, dst):
 	make_dirs(dst, [DST_SPEC, DST_MELSPECS, DST_MFCC, DST_CENTER, DST_FLATNESS, DST_BANDWIDTH, DST_ZERO_CROSSING_RATE])
-	print()
+
 	for f in tqdm(files):
 		fpath = os.path.join(root, f)
 		fname = os.path.splitext(f)[0]
